@@ -1,3 +1,4 @@
+
 """
 Ejercicio 1: Suma de Dos Números
 Descripción: Este ejercicio consiste en crear una función que reciba dos números como argumentos y devuelva la suma de ambos.
@@ -5,18 +6,27 @@ Descripción: Este ejercicio consiste en crear una función que reciba dos núme
 
 def sumar(a, b):
     # Escribe aqui el return de la suma de 2 numeros
-
+    return a + b
 """
 Ejercicio 2: Factorial de un Número
-Descripción: En este ejercicio se requiere crear una función que calcule el factorial de un número dado. El factorial de un número nn se calcula como n!=n×(n−1)×(n−2)×…×1n!=n×(n−1)×(n−2)×…×1.
+Descripción: En este ejercicio se requiere crear una función que calcule el factorial de un número dado. El factorial de un número nn 
+se calcula como n!=n×(n−1)×(n−2)×…×1n!=n×(n−1)×(n−2)×…×1.
 """
     
 def factorial(n):
     if n == 0:
         # Escribe aqui el return de la operacion anterior
+        return 1
     else:
         # Escribe aqui el return de la operacion contraria a la operacion anterior
+        resultado = 1
+        i = n
+        while i >= 1:
+            resultado = resultado * i
+            i = i -1
 
+        return resultado
+        
 """
 Ejercicio 3: Contar Vocales en una Cadena
 Descripción: En este ejercicio se debe implementar una función que cuente el número de vocales (mayúsculas y minúsculas) en una cadena de texto dada.
@@ -28,6 +38,7 @@ def contar_vocales(cadena):
     for letra in cadena:
         if letra in vocales:
             # Escribe aqui el contador de vocales
+            contador = contador + 1
     return contador
 
 """
@@ -37,6 +48,7 @@ Descripción: En este ejercicio se debe implementar una función que verifique s
 
 def es_palindromo(cadena):
     # Escribe aqui el return de la cadena al reves con una funcion de python
+    
     return cadena == cadena[::-1]
 
 """
@@ -49,3 +61,8 @@ def suma_lista(lista):
     for elemento in lista:
         suma += elemento
     return suma
+
+
+n = int(input("Ingrese el número: "))
+print ("El factorial de ", n, " es: ")
+print (factorial(n))
